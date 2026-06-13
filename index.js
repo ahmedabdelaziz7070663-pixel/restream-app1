@@ -40,10 +40,10 @@ const channels = {
 // 🎯 لوجو لكل قناة
 const logos = {
   ch1: "logo1.png",
-  ch2: "logo22.png",
-  ch3: "logo33.png",
-  ch4: "logo44.png",
-  ch5: "logo55.png",
+  ch2: "logo1.png",
+  ch3: "logo1.png",
+  ch4: "logo1.png",
+  ch5: "logo1.png",
 };
 
 function getLogo(id) {
