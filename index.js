@@ -12,28 +12,28 @@ let viewerIntervals = {};
 // 🎯 القنوات
 const channels = {
   ch1: {
-    input: "https://example.com/ch1.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-1"
+    input: "http://iptvxa.com/2180001016/6163219840/771556",
+    output: "rtmp://rtmp.livepeer.com/live/stream-key-f42e-8wdd-30g9-s3gn"
   },
 
   ch2: {
-    input: "https://example.com/ch2.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-2"
+    input: "http://iptvxa.com/2180001016/6163219840/771557",
+    output: "rtmp://rtmp.livepeer.com/live/stream-key-0eef-2sbx-m34e-i0jf"
   },
 
   ch3: {
-    input: "https://example.com/ch3.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-3"
+    input: "http://iptvxa.com/2180001016/6163219840/771558",
+    output: "rtmp://rtmp.livepeer.com/live/stream-key-b53d-dx70-ehp9-bjfh"
   },
 
   ch4: {
-    input: "https://example.com/ch4.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-4"
+    input: "http://iptvxa.com/2180001016/6163219840/771559",
+    output: "rtmp://rtmp.livepeer.com/live/stream-key-bfca-egc0-x35l-m6lt"
   },
 
   ch5: {
-    input: "https://example.com/ch5.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-5"
+    input: "http://iptvxa.com/2180001016/6163219840/771560",
+    output: "rtmp://rtmp.livepeer.com/live/stream-key-6e74-mu1u-0a68-qlrk"
   }
 };
 
