@@ -13,7 +13,7 @@ let viewerIntervals = {};
 const channels = {
   ch1: {
     input: "http://185.160.192.14/live/171348492752/5S6HGsea3j/255224.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-f42e-8wdd-30g9-s3gn"
+    output: "rtmp://rtmp.livepeer.com/live/f42e-8wdd-30g9-s3gn"
   },
 
   ch2: {
