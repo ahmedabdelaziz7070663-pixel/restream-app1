@@ -17,22 +17,22 @@ const channels = {
   },
 
   ch2: {
-    input: "http://iptvxa.com/2180001016/6163219840/771557",
+    input: "http://iptvxa.com/live/2180001016/6163219840/771557.m3u8",
     output: "rtmp://rtmp.livepeer.com/live/stream-key-0eef-2sbx-m34e-i0jf"
   },
 
   ch3: {
-    input: "http://iptvxa.com/2180001016/6163219840/771558",
+    input: "http://iptvxa.com/live/2180001016/6163219840/771558.m3u8",
     output: "rtmp://rtmp.livepeer.com/live/stream-key-b53d-dx70-ehp9-bjfh"
   },
 
   ch4: {
-    input: "http://iptvxa.com/2180001016/6163219840/771559",
+    input: "http://iptvxa.com/live/2180001016/6163219840/771559.m3u8",
     output: "rtmp://rtmp.livepeer.com/live/stream-key-bfca-egc0-x35l-m6lt"
   },
 
   ch5: {
-    input: "http://iptvxa.com/2180001016/6163219840/771560",
+    input: "http://iptvxa.com/live/2180001016/6163219840/771560.m3u8",
     output: "rtmp://rtmp.livepeer.com/live/stream-key-6e74-mu1u-0a68-qlrk"
   }
 };
