@@ -12,28 +12,28 @@ let viewerIntervals = {};
 // 🎯 القنوات
 const channels = {
   ch1: {
-    input: "http://185.160.192.14/live/171348492752/5S6HGsea3j/255224.m3u8",
+    input: "http://iptvxa.com/live/2180001016/6163219840/771556.m3u8",
     output: "rtmp://rtmp.livepeer.com/live/f42e-8wdd-30g9-s3gn"
   },
 
   ch2: {
     input: "http://iptvxa.com/live/2180001016/6163219840/771557.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-0eef-2sbx-m34e-i0jf"
+    output: "rtmp://rtmp.livepeer.com/live/0eef-2sbx-m34e-i0jf"
   },
 
   ch3: {
     input: "http://iptvxa.com/live/2180001016/6163219840/771558.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-b53d-dx70-ehp9-bjfh"
+    output: "rtmp://rtmp.livepeer.com/live/b53d-dx70-ehp9-bjfh"
   },
 
   ch4: {
     input: "http://iptvxa.com/live/2180001016/6163219840/771559.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-bfca-egc0-x35l-m6lt"
+    output: "rtmp://rtmp.livepeer.com/live/bfca-egc0-x35l-m6lt"
   },
 
   ch5: {
     input: "http://iptvxa.com/live/2180001016/6163219840/771560.m3u8",
-    output: "rtmp://rtmp.livepeer.com/live/stream-key-6e74-mu1u-0a68-qlrk"
+    output: "rtmp://rtmp.livepeer.com/live/6e74-mu1u-0a68-qlrk"
   }
 };
 
