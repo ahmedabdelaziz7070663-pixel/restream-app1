@@ -17,22 +17,22 @@ const channels = {
   },
 
   ch2: {
-    input: "http://185.160.192.14/live/171348492752/5S6HGsea3j/255225.m3u8",
+    input: "http://rgkkw.live/live/akheelasharaf/97430689947/744524.ts",
     output: "rtmp://rtmp.livepeer.com/live/0eef-2sbx-m34e-i0jf"
   },
 
   ch3: {
-    input: "http://iptvxa.com/live/2180001016/6163219840/771558.m3u8",
+    input: "http://rgkkw.live/live/akheelasharaf/97430689947/744525.ts",
     output: "rtmp://rtmp.livepeer.com/live/b53d-dx70-ehp9-bjfh"
   },
 
   ch4: {
-    input: "http://iptvxa.com/live/2180001016/6163219840/771559.m3u8",
+    input: "http://rgkkw.live/live/akheelasharaf/97430689947/744526.ts",
     output: "rtmp://rtmp.livepeer.com/live/bfca-egc0-x35l-m6lt"
   },
 
   ch5: {
-    input: "http://iptvxa.com/live/2180001016/6163219840/771560.m3u8",
+    input: "http://rgkkw.live/live/akheelasharaf/97430689947/744527.ts",
     output: "rtmp://rtmp.livepeer.com/live/6e74-mu1u-0a68-qlrk"
   }
 };
@@ -40,10 +40,10 @@ const channels = {
 // 🎯 لوجو لكل قناة
 const logos = {
   ch1: "logo1.png",
-  ch2: "logo1.png",
-  ch3: "logo1.png",
-  ch4: "logo1.png",
-  ch5: "logo1.png",
+  ch2: "logo2.png",
+  ch3: "logo3.png",
+  ch4: "logo4.png",
+  ch5: "logo5.png",
 };
 
 function getLogo(id) {
