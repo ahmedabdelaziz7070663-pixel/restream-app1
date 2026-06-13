@@ -13,22 +13,22 @@ let viewerIntervals = {};
 const channels = {
   ch1: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744523.ts",
-    output: "rtmp://rtmp.livepeer.com/live/f42e-8wdd-30g9-s3gn"
+    output: "rtmp://rtmp.livepeer.com/live/64bc-ot8h-zpee-obg4"
   },
 
   ch2: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744524.ts",
-    output: "rtmp://rtmp.livepeer.com/live/0eef-2sbx-m34e-i0jf"
+    output: "rtmp://rtmp.livepeer.com/live/0df0-3uma-l4zt-7o7i"
   },
 
   ch3: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744525.ts",
-    output: "rtmp://rtmp.livepeer.com/live/b53d-dx70-ehp9-bjfh"
+    output: "rtmp://rtmp.livepeer.com/live/314d-wmn0-05vr-2vtl"
   },
 
   ch4: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744526.ts",
-    output: "rtmp://rtmp.livepeer.com/live/bfca-egc0-x35l-m6lt"
+    output: "rtmp://rtmp.livepeer.com/live/ad31-vdct-dexe-l6b8"
   },
 
   ch5: {
