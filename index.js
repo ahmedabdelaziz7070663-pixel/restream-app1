@@ -17,7 +17,7 @@ const channels = {
   },
 
   ch2: {
-    input: "http://iptvxa.com/live/2180001016/6163219840/771557.m3u8",
+    input: "http://rgkkw.live:8080/live/akheelasharaf/97430689947/744518.ts",
     output: "rtmp://rtmp.livepeer.com/live/0eef-2sbx-m34e-i0jf"
   },
 
