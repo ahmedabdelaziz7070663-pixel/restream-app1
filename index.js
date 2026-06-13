@@ -12,12 +12,12 @@ let viewerIntervals = {};
 // 🎯 القنوات
 const channels = {
   ch1: {
-    input: "http://185.160.192.14/live/171348492752/5S6HGsea3j/255225.m3u8",
+    input: "http://rgkkw.live/live/akheelasharaf/97430689947/744518.ts",
     output: "rtmp://rtmp.livepeer.com/live/f42e-8wdd-30g9-s3gn"
   },
 
   ch2: {
-    input: "http://rgkkw.live:8080/live/akheelasharaf/97430689947/744518.ts",
+    input: "http://185.160.192.14/live/171348492752/5S6HGsea3j/255225.m3u8",
     output: "rtmp://rtmp.livepeer.com/live/0eef-2sbx-m34e-i0jf"
   },
 
