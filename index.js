@@ -12,7 +12,7 @@ let viewerIntervals = {};
 // 🎯 القنوات
 const channels = {
   ch1: {
-    input: "http://iptvxa.com/2180001016/6163219840/771556",
+    input: "http://iptvxa.com/live/2180001016/6163219840/771556.m3u8",
     output: "rtmp://rtmp.livepeer.com/live/stream-key-f42e-8wdd-30g9-s3gn"
   },
 
