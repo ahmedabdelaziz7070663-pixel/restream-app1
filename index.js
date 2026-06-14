@@ -23,17 +23,17 @@ const channels = {
 
   ch3: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744525.ts",
-    output: "rtmp://rtmp.livepeer.com/live/314d-wmn0-05vr-2vtl"
+    output: "rtmp://rtmp.livepeer.com/live/2948-k4ao-3qj7-ipxu"
   },
 
   ch4: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744526.ts",
-    output: "rtmp://rtmp.livepeer.com/live/ad31-vdct-dexe-l6b8"
+    output: "rtmp://rtmp.livepeer.com/live/a546-ofhm-g3bd-yl6n"
   },
 
   ch5: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744527.ts",
-    output: "rtmp://rtmp://ssh101.bozztv.com/ssh101/max202615"
+    output: "rtmp://rtmp.livepeer.com/live/8847-hfuy-6ijq-mtt6"
   }
 };
 
