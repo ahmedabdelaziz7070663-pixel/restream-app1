@@ -85,31 +85,27 @@ app.get("/start", (req, res) => {
     "-fflags", "+genpts+discardcorrupt",
     "-flags", "low_delay",
 
+    "-i", channel.input,
+    "-i", logo,
 
-"-i", channel.input,
-"-i", logo,
+    "-filter_complex",
+    "[0:v]scale=1280:720,setsar=1[base];[base][1:v]overlay=W-w-5:5",
 
-"-filter_complex",
-"[0:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2[base];[1:v]scale=-1:3100[logo];[base][logo]overlay=main_w-overlay_w-2:2",
+    "-c:v", "libx264",
+    "-preset", "veryfast",
+    "-tune", "zerolatency",
+    "-b:v", "1200k",
+    "-maxrate", "1200k",
+    "-bufsize", "2400k",
+    "-r", "25",
 
-"-c:v", "libx264",
-"-preset", "veryfast",
-"-tune", "zerolatency",
+    "-c:a", "aac",
+    "-b:a", "96k",
 
-"-profile:v", "high",
-
-"-b:v", "5000k",
-"-maxrate", "6000k",
-"-bufsize", "12000k",
-
-"-r", "25",
-
-"-c:a", "aac",
-"-b:a", "128k",
-
-"-f", "flv",
-channel.output
+    "-f", "flv",
+    channel.output
   ]);
+
   ffmpeg.stderr.on("data", (d) => {
     console.log(`[${id}] ${d.toString()}`);
   });
