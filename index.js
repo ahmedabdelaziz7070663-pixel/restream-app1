@@ -61,8 +61,9 @@ process.on("unhandledRejection", (err) => {
 
 // 🌐 Home
 app.get("/", (req, res) => {
-  res.send("🚀 Restream System Running FINAL (1080p Quality)");
+  res.send("🚀 Restream System Running FINAL (Improved Viewers)");
 });
+
 
 // ▶️ Start Stream
 app.get("/start", (req, res) => {
@@ -83,46 +84,25 @@ app.get("/start", (req, res) => {
     "-re",
     "-fflags", "+genpts+discardcorrupt",
     "-flags", "low_delay",
-    
-    // Input filters to improve quality
-    "-vsync", "0",
-    "-hwaccel", "auto",
 
     "-i", channel.input,
     "-i", logo,
 
-    // 1080p filter with better scaling algorithm
     "-filter_complex",
-    "[0:v]scale=1920:1080:flags=lanczos,setsar=1,fps=30[base];[base][1:v]overlay=W-w-10:H-h-10:format=auto",
+    "[0:v]scale=1280:720,setsar=1[base];[base][1:v]overlay=W-w-5:5",
 
-    // Video codec with high quality settings
     "-c:v", "libx264",
-    "-preset", "medium",        // Better quality than veryfast
+    "-preset", "veryfast",
     "-tune", "zerolatency",
-    "-profile:v", "high",       // High profile for 1080p
-    "-level", "4.1",           // Level for 1080p30
-    
-    // Higher bitrate for 1080p
-    "-b:v", "4500k",           // Increased from 1200k
-    "-maxrate", "6000k",       // Max bitrate
-    "-bufsize", "9000k",       // Buffer size
-    
-    // Quality parameters
-    "-crf", "23",              // Constant Rate Factor
-    "-x264-params", "keyint=60:min-keyint=30:scenecut=40",
-    
-    // Frame rate for 1080p
-    "-r", "30",                // Increased from 25 to 30 fps
-    
-    // Audio settings (improved)
+    "-b:v", "1200k",
+    "-maxrate", "1200k",
+    "-bufsize", "2400k",
+    "-r", "25",
+
     "-c:a", "aac",
-    "-b:a", "128k",            // Increased from 96k
-    "-ar", "44100",            // Sample rate
-    
-    // Output format
+    "-b:a", "96k",
+
     "-f", "flv",
-    "-flvflags", "no_duration_filesize",
-    
     channel.output
   ]);
 
@@ -159,8 +139,9 @@ app.get("/start", (req, res) => {
 
   }, 4000);
 
-  res.send(`✅ Channel ${id} started (1080p 4.5Mbps)`);
+  res.send(`✅ Channel ${id} started`);
 });
+
 
 // 🛑 Stop Stream
 app.get("/stop", (req, res) => {
@@ -181,6 +162,7 @@ app.get("/stop", (req, res) => {
   res.send(`🛑 Channel ${id} stopped`);
 });
 
+
 // 📊 Status
 app.get("/status", (req, res) => {
   const result = {};
@@ -188,13 +170,13 @@ app.get("/status", (req, res) => {
   for (const id in channels) {
     result[id] = {
       active: !!ffmpegProcesses[id],
-      viewers: viewers[id] || 0,
-      quality: "1080p"
+      viewers: viewers[id] || 0
     };
   }
 
   res.json(result);
 });
+
 
 // 📡 Dashboard
 app.get("/dashboard", (req, res) => {
@@ -202,17 +184,16 @@ app.get("/dashboard", (req, res) => {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard 1080p</title>
+  <title>Dashboard</title>
   <style>
     body { font-family: Arial; background:#111; color:#fff; padding:20px; }
     .card { background:#222; padding:15px; margin:10px 0; border-radius:10px; }
     button { padding:8px 12px; margin:5px; cursor:pointer; }
-    .quality-badge { background:#4CAF50; padding:2px 8px; border-radius:5px; font-size:12px; }
   </style>
 </head>
 <body>
 
-<h2>📡 Live Dashboard <span style="font-size:14px;" class="quality-badge">1080p Full HD</span></h2>
+<h2>📡 Live Dashboard (Improved Viewers)</h2>
 
 <div id="list"></div>
 
@@ -229,9 +210,8 @@ async function load() {
     const d = data[ch];
 
     box.innerHTML += "<div class='card'>" +
-      "<h3>" + ch.toUpperCase() + " - " + (d.active ? '🟢 LIVE' : '🔴 OFFLINE') + " <span class='quality-badge'>" + d.quality + "</span></h3>" +
+      "<h3>" + ch + " - " + (d.active ? '🟢 LIVE' : '🔴 OFFLINE') + "</h3>" +
       "<p>👁️ Viewers: " + d.viewers + "</p>" +
-      "<p>🎬 Quality: 1920x1080 @ 4.5 Mbps</p>" +
       "<a href='/start?id=" + ch + "'><button style='background:green;color:white;'>Start</button></a>" +
       "<a href='/stop?id=" + ch + "'><button style='background:red;color:white;'>Stop</button></a>" +
       "</div>";
@@ -248,6 +228,7 @@ setInterval(load, 3000);
   `);
 });
 
+
 // 🚀 Health check
 app.get("/health", (req, res) => {
   res.send("OK");
@@ -256,5 +237,4 @@ app.get("/health", (req, res) => {
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log("🚀 Server running on port", port);
-  console.log("📺 Streaming at 1080p (1920x1080) with 4.5 Mbps bitrate");
 });
