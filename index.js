@@ -33,7 +33,7 @@ const channels = {
 
   ch5: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744527.ts",
-    output: "rtmp://rtmp.livepeer.com/live/8847-hfuy-6ijq-mtt6"
+    output: "rtmp://rtmp.livepeer.com/live/a4be-dmef-x7d9-4kme"
   }
 };
 
