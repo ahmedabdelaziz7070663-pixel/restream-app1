@@ -17,7 +17,7 @@ const channels = {
   },
 
   ch2: {
-    input: "http://185.160.192.14/live/171348492752/5S6HGsea3j/255225.m3u8",
+    input: "http://rgkkw.live/live/akheelasharaf/97430689947/744524.ts",
     output: "rtmp://rtmp.livepeer.com/live/6a40-x3zs-p34r-ueay"
   },
 
