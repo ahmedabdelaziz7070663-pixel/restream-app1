@@ -13,7 +13,7 @@ let viewerIntervals = {};
 const channels = {
   ch1: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744523.ts",
-    output: "rtmp://rtmp.livepeer.com/live/7d8c-1z1h-x9wv-ijnn"
+    output: "rtmp://rtmp.livepeer.com/live/ecb4-qw51-gpdb-cj86"
   },
 
   ch2: {
