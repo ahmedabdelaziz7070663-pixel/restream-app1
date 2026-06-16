@@ -13,22 +13,22 @@ let viewerIntervals = {};
 const channels = {
   ch1: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744523.ts",
-    output: "rtmp://rtmp.livepeer.com/live/ecb4-qw51-gpdb-cj86"
+    output: "rtmp://rtmp.livepeer.com/live/5516-8c0c-bu72-ead9"
   },
 
   ch2: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744524.ts",
-    output: "rtmp://rtmp.livepeer.com/live/7d57-n258-zcdg-x83m"
+    output: "rtmp://rtmp.livepeer.com/live/5e26-ufcu-ly38-z41b"
   },
 
   ch3: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744525.ts",
-    output: "rtmp://rtmp.livepeer.com/live/2948-k4ao-3qj7-ipxu"
+    output: "rtmp://rtmp.livepeer.com/live/dbd5-z7hw-tkxt-ejwt"
   },
 
   ch4: {
     input: "http://rgkkw.live/live/akheelasharaf/97430689947/744526.ts",
-    output: "rtmp://rtmp.livepeer.com/live/a546-ofhm-g3bd-yl6n"
+    output: "rtmp://rtmp.livepeer.com/live/288c-r9tc-tumq-zpz2"
   },
 
   ch5: {
@@ -89,29 +89,26 @@ app.get("/start", (req, res) => {
     "-i", logo,
 
     "-filter_complex",
-    "[0:v]scale=1280:720,setsar=1[base];[base][1:v]overlay=W-w-5:5",
+    "[0:v]scale=1920:1080,setsar=1[base];[base][1:v]overlay=W-w-5:5",  // ✅ رفع الدقة لـ 1080
 
-"-c:v", "libx264",
+    "-c:v", "libx264",
+    "-preset", "veryfast",
+    "-tune", "zerolatency",
+    "-profile:v", "high",
+    
+    "-b:v", "6000k",        // ✅ زيادة البتريت
+    "-maxrate", "7000k",    // ✅ زيادة الحد الأقصى
+    "-bufsize", "14000k",   // ✅ زيادة حجم البفر
 
-"-preset", "veryfast",
+    "-r", "25",
+    "-g", "50",
 
-"-tune", "zerolatency",
+    "-c:a", "aac",
+    "-b:a", "160k",
+    "-ar", "48000",
 
-"-profile:v", "high",
-
-"-b:v", "4500k",
-"-maxrate", "5000k",
-"-bufsize", "10000k",
-
-"-r", "25",
-"-g", "50",
-
-"-c:a", "aac",
-"-b:a", "160k",
-"-ar", "48000",
-
-"-f", "flv",
-channel.output
+    "-f", "flv",
+    channel.output
   ]);
 
   ffmpeg.stderr.on("data", (d) => {
@@ -201,7 +198,7 @@ app.get("/dashboard", (req, res) => {
 </head>
 <body>
 
-<h2>📡 Live Dashboard (Improved Viewers)</h2>
+<h2>📡 Live Dashboard (1080p)</h2>
 
 <div id="list"></div>
 
